@@ -1,0 +1,57 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /tb
+=== Design Unit: tb
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                    : 1
+    Covered                        : 0
+    Percent                        : 0.00%
+    Missing                        : 1
+
+Covergroup/Bin                                  Hits       Goal    Status
+--------------------------------------------------------------------------------
+TYPE /tb/rx_lane_cross_cg rx_lane_cross_cg
+
+    Coverpoint lane0_state
+        bin IDLE                                5          1       Covered
+        bin ACTIVE                              3          1       Covered
+        bin STALL                               2          1       Covered
+        bin ERROR                               0          1       ZERO
+
+    Coverpoint lane1_state
+        bin IDLE                                6          1       Covered
+        bin ACTIVE                              4          1       Covered
+        bin STALL                               1          1       Covered
+        bin ERROR                               0          1       ZERO
+
+    Coverpoint lane2_state
+        bin IDLE                                4          1       Covered
+        bin ACTIVE                              5          1       Covered
+        bin STALL                               1          1       Covered
+        bin ERROR                               0          1       ZERO
+
+    Coverpoint lane3_state
+        bin IDLE                                3          1       Covered
+        bin ACTIVE                              6          1       Covered
+        bin STALL                               2          1       Covered
+        bin ERROR                               0          1       ZERO
+
+    Cross lane0_state#lane1_state#lane2_state#lane3_state
+        <IDLE,IDLE,IDLE,IDLE>                   5          1       Covered
+        <IDLE,ACTIVE,IDLE,IDLE>                 3          1       Covered
+        <ACTIVE,IDLE,IDLE,IDLE>                 2          1       Covered
+        <STALL,IDLE,ACTIVE,IDLE>                1          1       Covered
+        <IDLE,IDLE,ACTIVE,ACTIVE>               2          1       Covered
+        <ACTIVE,ACTIVE,IDLE,IDLE>               1          1       Covered
+        <IDLE,STALL,IDLE,IDLE>                  1          1       Covered
+        <ACTIVE,IDLE,ACTIVE,IDLE>               1          1       Covered
+        <IDLE,IDLE,IDLE,ACTIVE>                 2          1       Covered
+        <ACTIVE,ACTIVE,ACTIVE,IDLE>             1          1       Covered
+        <IDLE,ACTIVE,STALL,IDLE>                1          1       Covered
+        <IDLE,IDLE,STALL,IDLE>                  1          1       Covered
+        <IDLE,IDLE,IDLE,STALL>                  0          1       ZERO
+        <ERROR,IDLE,IDLE,IDLE>                  0          1       ZERO
+        <ACTIVE,STALL,IDLE,ACTIVE>              0          1       ZERO

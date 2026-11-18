@@ -1,0 +1,14 @@
+{
+  // Extensions recommended for Dabih development.
+  // VS Code prompts developers to install these when they open the workspace.
+  "recommendations": [
+    // Python language support and test discovery (pytest)
+    "ms-python.python",
+
+    // Type checking and IntelliSense for the dabih package
+    "ms-python.vscode-pylance",
+
+    // SystemVerilog syntax highlighting for examples/rtl/*.sv and emitted wrappers
+    "mshr-h.veriloghdl"
+  ]
+}

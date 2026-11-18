@@ -1,0 +1,77 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /tb
+=== Design Unit: tb
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                    : 2
+    Covered                        : 0
+    Percent                        : 0.00%
+    Missing                        : 2
+
+Covergroup/Bin                                  Hits       Goal    Status
+--------------------------------------------------------------------------------
+TYPE /tb/unrelated_cg unrelated_cg
+
+    Coverpoint addr_phase
+        bin READ                                10         1       Covered
+        bin WRITE                               8          1       Covered
+
+    Coverpoint burst_len
+        bin SINGLE                              6          1       Covered
+        bin BURST4                              4          1       Covered
+
+    Cross addr_phase#burst_len
+        <READ,SINGLE>                           4          1       Covered
+        <READ,BURST4>                           3          1       Covered
+        <WRITE,SINGLE>                          2          1       Covered
+        <WRITE,BURST4>                          1          1       Covered
+
+--------------------------------------------------------------------------------
+TYPE /tb/rx_lane_cross_cg rx_lane_cross_cg
+
+    Coverpoint lane0_state
+        bin IDLE                                5          1       Covered
+        bin ACTIVE                              3          1       Covered
+        bin STALL                               0          1       ZERO
+        bin ERROR                               0          1       ZERO
+
+    Coverpoint lane1_state
+        bin IDLE                                4          1       Covered
+        bin ACTIVE                              4          1       Covered
+        bin STALL                               0          1       ZERO
+        bin ERROR                               0          1       ZERO
+
+    Cross lane0_state#lane1_state
+        <IDLE,IDLE>                             4          1       Covered
+        <IDLE,ACTIVE>                           1          1       Covered
+        <ACTIVE,IDLE>                           2          1       Covered
+        <ACTIVE,ACTIVE>                         1          1       Covered
+        <STALL,IDLE>                            0          1       ZERO
+        <ERROR,IDLE>                            0          1       ZERO
+
+--------------------------------------------------------------------------------
+TYPE /tb/tx_lane_cross_cg tx_lane_cross_cg
+
+    Coverpoint tx0_state
+        bin IDLE                                7          1       Covered
+        bin SEND                                5          1       Covered
+        bin FLUSH                               0          1       ZERO
+
+    Coverpoint tx1_state
+        bin IDLE                                6          1       Covered
+        bin SEND                                4          1       Covered
+        bin FLUSH                               2          1       Covered
+
+    Cross tx0_state#tx1_state
+        <IDLE,IDLE>                             5          1       Covered
+        <IDLE,SEND>                             2          1       Covered
+        <SEND,IDLE>                             3          1       Covered
+        <SEND,SEND>                             2          1       Covered
+        <IDLE,FLUSH>                            1          1       Covered
+        <FLUSH,IDLE>                            0          1       ZERO
+        <SEND,FLUSH>                            0          1       ZERO
+        <FLUSH,SEND>                            0          1       ZERO
+        <FLUSH,FLUSH>                           0          1       ZERO

@@ -1,0 +1,160 @@
+{
+  "run_id": "seed_9999",
+  "simulator": "questa",
+  "covergroup": "rx_lane_cross_cg",
+  "hits": [
+    {
+      "bin": [
+        "IDLE",
+        "ACTIVE",
+        "ERROR",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "STALL",
+        "STALL",
+        "STALL"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "STALL",
+        "STALL",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "STALL",
+        "ERROR",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "ACTIVE",
+        "ACTIVE",
+        "ACTIVE",
+        "ACTIVE"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "ACTIVE",
+        "ACTIVE",
+        "ACTIVE",
+        "STALL"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "ACTIVE",
+        "ACTIVE",
+        "ACTIVE",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "ACTIVE",
+        "ACTIVE",
+        "STALL",
+        "STALL"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "ACTIVE",
+        "ACTIVE",
+        "STALL",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "ACTIVE",
+        "ACTIVE",
+        "ERROR",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "ACTIVE",
+        "STALL",
+        "STALL",
+        "STALL"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "ACTIVE",
+        "STALL",
+        "STALL",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "ACTIVE",
+        "STALL",
+        "ERROR",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "ACTIVE",
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "STALL",
+        "STALL",
+        "STALL",
+        "STALL"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "STALL",
+        "STALL",
+        "STALL",
+        "ERROR"
+      ],
+      "count": 1
+    }
+  ]
+}

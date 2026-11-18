@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dabih"
+version = "0.1.0"
+description = "Coverage model compression via equivalence classes"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE.md"]
+authors = [{ name = "Christopher Yang" }]
+keywords = ["verification", "functional-coverage", "systemverilog", "symmetry", "asic", "fpga"]
+dependencies = ["pyslang>=12"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "build>=1"]
+
+[project.scripts]
+dabih = "dabih.cli:main"
+
+# Explicit discovery: the repo root also holds assets/, docs/, examples/, web/ —
+# only the dabih package itself should be installed.
+[tool.setuptools.packages.find]
+include = ["dabih*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

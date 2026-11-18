@@ -1,0 +1,54 @@
+============================================================
+VCS Code Coverage
+Report: urgReport/coverage.txt
+============================================================
+
+COVERGROUP COVERAGE:
+============================================================
+Covergroup                   Metric    Goal   Status
+============================================================
+/tb/rx_lane_cross_cg         37.50%    100%   Uncovered
+
+    Coverpoint/Cross         Metric    Goal   Status
+    ----------------------------------------------------
+    lane0_state              75.00%    100%   Uncovered
+        bin IDLE             5         1      Covered
+        bin ACTIVE           3         1      Covered
+        bin STALL            2         1      Covered
+        bin ERROR            0         1      Zero
+
+    lane1_state              75.00%    100%   Uncovered
+        bin IDLE             6         1      Covered
+        bin ACTIVE           4         1      Covered
+        bin STALL            1         1      Covered
+        bin ERROR            0         1      Zero
+
+    lane2_state              75.00%    100%   Uncovered
+        bin IDLE             4         1      Covered
+        bin ACTIVE           5         1      Covered
+        bin STALL            1         1      Covered
+        bin ERROR            0         1      Zero
+
+    lane3_state              75.00%    100%   Uncovered
+        bin IDLE             3         1      Covered
+        bin ACTIVE           6         1      Covered
+        bin STALL            2         1      Covered
+        bin ERROR            0         1      Zero
+
+    lane0_state##lane1_state##lane2_state##lane3_state
+                             37.50%    100%   Uncovered
+        bin <IDLE,IDLE,IDLE,IDLE>              5    1   Covered
+        bin <IDLE,ACTIVE,IDLE,IDLE>            3    1   Covered
+        bin <ACTIVE,IDLE,IDLE,IDLE>            2    1   Covered
+        bin <STALL,IDLE,ACTIVE,IDLE>           1    1   Covered
+        bin <IDLE,IDLE,ACTIVE,ACTIVE>          2    1   Covered
+        bin <ACTIVE,ACTIVE,IDLE,IDLE>          1    1   Covered
+        bin <IDLE,STALL,IDLE,IDLE>             1    1   Covered
+        bin <ACTIVE,IDLE,ACTIVE,IDLE>          1    1   Covered
+        bin <IDLE,IDLE,IDLE,ACTIVE>            2    1   Covered
+        bin <ACTIVE,ACTIVE,ACTIVE,IDLE>        1    1   Covered
+        bin <IDLE,ACTIVE,STALL,IDLE>           1    1   Covered
+        bin <IDLE,IDLE,STALL,IDLE>             1    1   Covered
+        bin <IDLE,IDLE,IDLE,STALL>             0    1   Zero
+        bin <ERROR,IDLE,IDLE,IDLE>             0    1   Zero
+        bin <ACTIVE,STALL,IDLE,ACTIVE>         0    1   Zero

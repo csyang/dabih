@@ -1,0 +1,187 @@
+{
+  "run_id": "seed_0042",
+  "simulator": "questa",
+  "covergroup": "rx_lane_cross_cg",
+  "hits": [
+    {
+      "bin": [
+        "IDLE",
+        "IDLE",
+        "IDLE",
+        "IDLE"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "IDLE",
+        "IDLE",
+        "ACTIVE"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "IDLE",
+        "IDLE",
+        "STALL"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "IDLE",
+        "IDLE",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "IDLE",
+        "ACTIVE",
+        "ACTIVE"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "IDLE",
+        "ACTIVE",
+        "STALL"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "IDLE",
+        "ACTIVE",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "IDLE",
+        "STALL",
+        "STALL"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "IDLE",
+        "STALL",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "IDLE",
+        "ERROR",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "ACTIVE",
+        "ACTIVE",
+        "ACTIVE"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "ACTIVE",
+        "ACTIVE",
+        "STALL"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "ACTIVE",
+        "ACTIVE",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "ACTIVE",
+        "STALL",
+        "STALL"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "ACTIVE",
+        "STALL",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "ACTIVE",
+        "ERROR",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "STALL",
+        "STALL",
+        "STALL"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "STALL",
+        "STALL",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "STALL",
+        "ERROR",
+        "ERROR"
+      ],
+      "count": 1
+    },
+    {
+      "bin": [
+        "IDLE",
+        "ERROR",
+        "ERROR",
+        "ERROR"
+      ],
+      "count": 1
+    }
+  ]
+}

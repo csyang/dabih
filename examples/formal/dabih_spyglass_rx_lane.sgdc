@@ -1,0 +1,72 @@
+# ══════════════════════════════════════════════════════════════════════
+# Dabih — SpyGlass / VC SpyGlass Structural Symmetry Constraints
+# Generated: 2026-11-17 11:31
+# Tool: synopsys/vc_spyglass/2024.09-SP2  (also compatible with spyglass)
+# DUT: serdes_top
+# Instance pattern: rx_gen[{i}].u_rx
+# ══════════════════════════════════════════════════════════════════════
+
+# ── Clock definition ─────────────────────────────────────────────────
+current_design serdes_top
+define_clock -name dabih_clk -period 10 [get_ports clk]
+
+# ── Symmetric instance group annotations ─────────────────────────────
+# Each group annotates a set of instances that Dabih has declared
+# structurally symmetric.  SpyGlass checks that all group members
+# have identical fanout, clock domain, and reset connectivity.
+
+# Declaration 0: instance, group=S4, block_size=1
+# Instances: [0, 1, 2, 3]
+define_design_attribute \
+    -name dabih_symmetric_group \
+    -value 'dabih_sym_group_0_rx_lane' \
+    [get_cells { \
+        serdes_top/rx_gen[0]/u_rx \
+        serdes_top/rx_gen[1]/u_rx \
+        serdes_top/rx_gen[2]/u_rx \
+        serdes_top/rx_gen[3]/u_rx \
+    }]
+
+# Input port 'valid' — must be structurally identical across group
+define_design_attribute -name dabih_sym_input -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[0]/u_rx/valid}]
+define_design_attribute -name dabih_sym_input -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[1]/u_rx/valid}]
+define_design_attribute -name dabih_sym_input -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[2]/u_rx/valid}]
+define_design_attribute -name dabih_sym_input -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[3]/u_rx/valid}]
+
+# Input port 'data' — must be structurally identical across group
+define_design_attribute -name dabih_sym_input -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[0]/u_rx/data}]
+define_design_attribute -name dabih_sym_input -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[1]/u_rx/data}]
+define_design_attribute -name dabih_sym_input -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[2]/u_rx/data}]
+define_design_attribute -name dabih_sym_input -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[3]/u_rx/data}]
+
+# Output port 'state' — fanout must match across group
+define_design_attribute -name dabih_sym_output -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[0]/u_rx/state}]
+define_design_attribute -name dabih_sym_output -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[1]/u_rx/state}]
+define_design_attribute -name dabih_sym_output -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[2]/u_rx/state}]
+define_design_attribute -name dabih_sym_output -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[3]/u_rx/state}]
+
+# Output port 'ready' — fanout must match across group
+define_design_attribute -name dabih_sym_output -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[0]/u_rx/ready}]
+define_design_attribute -name dabih_sym_output -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[1]/u_rx/ready}]
+define_design_attribute -name dabih_sym_output -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[2]/u_rx/ready}]
+define_design_attribute -name dabih_sym_output -value 'dabih_sym_group_0_rx_lane' [get_nets {serdes_top/rx_gen[3]/u_rx/ready}]
+
+# ── SpyGlass rule configuration ──────────────────────────────────────
+# Enable structural symmetry rules for annotated groups.
+# Rule STARC05-1.3.1 checks for asymmetric fanout on same-group signals.
+# Rule W415 checks for signals driven in multiple processes (asymmetric).
+
+set_rule_parameter STARC05-1.3.1 -parameter check_fanout_symmetry yes
+set_rule_parameter W415          -parameter check_all_drivers       yes
+
+# ── Clock domain check ───────────────────────────────────────────────
+# All instances in a symmetric group must share the same clock domain.
+set_rule_parameter STARC05-2.1.3 -parameter check_group_cdc yes
+
+# ── Custom Dabih symmetry check ──────────────────────────────────────
+# If your SpyGlass installation includes custom rule support, the
+# following enables a dedicated structural symmetry audit rule.
+# Comment out if not available.
+#
+# load_rule_file dabih_sym_rules.sgdc
+# set_option enableDabihSymmetry yes

@@ -1,0 +1,77 @@
+============================================================
+VCS Code Coverage
+Report: urgReport/coverage.txt
+============================================================
+
+COVERGROUP COVERAGE:
+============================================================
+Covergroup                   Metric    Goal   Status
+============================================================
+/tb/unrelated_cg             100.00%   100%   Covered
+
+    Coverpoint/Cross         Metric    Goal   Status
+    ----------------------------------------------------
+    addr_phase               100.00%   100%   Covered
+        bin READ             10        1      Covered
+        bin WRITE            8         1      Covered
+
+    burst_len                100.00%   100%   Covered
+        bin SINGLE           6         1      Covered
+        bin BURST4           4         1      Covered
+
+    addr_phase##burst_len    100.00%   100%   Covered
+        bin <READ,SINGLE>    4         1      Covered
+        bin <READ,BURST4>    3         1      Covered
+        bin <WRITE,SINGLE>   2         1      Covered
+        bin <WRITE,BURST4>   1         1      Covered
+
+============================================================
+/tb/rx_lane_cross_cg         66.67%    100%   Uncovered
+
+    Coverpoint/Cross         Metric    Goal   Status
+    ----------------------------------------------------
+    lane0_state              100.00%   100%   Covered
+        bin IDLE             5         1      Covered
+        bin ACTIVE           3         1      Covered
+        bin STALL            0         1      Zero
+        bin ERROR            0         1      Zero
+
+    lane1_state              100.00%   100%   Covered
+        bin IDLE             4         1      Covered
+        bin ACTIVE           4         1      Covered
+        bin STALL            0         1      Zero
+        bin ERROR            0         1      Zero
+
+    lane0_state##lane1_state 66.67%    100%   Uncovered
+        bin <IDLE,IDLE>      4         1      Covered
+        bin <IDLE,ACTIVE>    1         1      Covered
+        bin <ACTIVE,IDLE>    2         1      Covered
+        bin <ACTIVE,ACTIVE>  1         1      Covered
+        bin <STALL,IDLE>     0         1      Zero
+        bin <ERROR,IDLE>     0         1      Zero
+
+============================================================
+/tb/tx_lane_cross_cg         55.56%    100%   Uncovered
+
+    Coverpoint/Cross         Metric    Goal   Status
+    ----------------------------------------------------
+    tx0_state                100.00%   100%   Covered
+        bin IDLE             7         1      Covered
+        bin SEND             5         1      Covered
+        bin FLUSH            0         1      Zero
+
+    tx1_state                100.00%   100%   Covered
+        bin IDLE             6         1      Covered
+        bin SEND             4         1      Covered
+        bin FLUSH            2         1      Covered
+
+    tx0_state##tx1_state     55.56%    100%   Uncovered
+        bin <IDLE,IDLE>      5         1      Covered
+        bin <IDLE,SEND>      2         1      Covered
+        bin <SEND,IDLE>      3         1      Covered
+        bin <SEND,SEND>      2         1      Covered
+        bin <IDLE,FLUSH>     1         1      Covered
+        bin <FLUSH,IDLE>     0         1      Zero
+        bin <SEND,FLUSH>     0         1      Zero
+        bin <FLUSH,SEND>     0         1      Zero
+        bin <FLUSH,FLUSH>    0         1      Zero

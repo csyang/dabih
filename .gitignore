@@ -1,0 +1,36 @@
+# ── Build outputs ─────────────────────────────────────────────────────────────
+dist/
+build/
+*.egg-info/
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# ── Environment and secrets ───────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+.release.env         # share path config — set per machine, never committed
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+
+# ── Windows ───────────────────────────────────────────────────────────────────
+Thumbs.db
+
+# ── Editor ────────────────────────────────────────────────────────────────────
+# Keep .vscode/ — it contains the test wiring and extension recommendations
+# that benefit everyone working on the project. Exclude personal settings only.
+.vscode/launch.json
+
+# ── Scratch output from running the CLI in the repo root ──────────────────────
+/spec.json
+/report.html
+/formal/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
